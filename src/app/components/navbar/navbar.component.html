@@ -5,20 +5,20 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <li class="nav-item" routerLinkActive="active"  [routerLinkActiveOptions]="{exact:true}">
+          <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item" routerLinkActive="active" >
+          <a class="nav-link" routerLink="comics">Comics</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active" >
+          <a class="nav-link" routerLink="artists">Artists</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active" >
+          <a class="nav-link" routerLink="heroes">Heroes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Comics</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Artists</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Heroes</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link disabled" href="#">Lists</a>
+            <a class="nav-link disabled">Lists</a>
           </li>
       </ul>
     </div>

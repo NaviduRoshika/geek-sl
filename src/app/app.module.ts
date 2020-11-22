@@ -8,12 +8,18 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './components/home/home.component';
+import { ComicsComponent } from './modules/comics/comics.component';
+import { ArtistsComponent } from './modules/artists/artists.component';
+import { HeroesComponent } from './modules/heroes/heroes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    ComicsComponent,
+    ArtistsComponent,
+    HeroesComponent
   ],
   imports: [
     BrowserModule,
