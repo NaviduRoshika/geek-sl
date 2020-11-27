@@ -1,18 +1,4 @@
 <div class="home">
-    <div class="container">
-        <div class="row" style="padding-top: 5%;">
-         <div class="col-md-3" *ngFor="let comic of comics">
-             <div style="max-width: 80%;">
-             <mat-card>
-                 <div>
-                     <!-- <img id="comic-card-image" src="https://image.freepik.com/free-vector/colorful-halftone-comic-background_23-2147919239.jpg" alt="comics"> -->
-                     <img class="comic-card-image" mat-card-image [src]="comic.imageUrl" alt="Photo of a Shiba Inu">
-                 </div>
-                 <mat-card-title>{{comic.name}}</mat-card-title>
-             </mat-card>
-            </div>
-         </div>
-        </div>
-    </div>
+    <router-outlet></router-outlet>
  </div>
  

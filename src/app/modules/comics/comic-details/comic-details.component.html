@@ -1,0 +1,14 @@
+<div class="comic-div">
+<mat-card>
+   <mat-card-title>{{comic.comicName}}</mat-card-title>
+   <div>
+       <img class="comic-image" [src]="comic.imagePathDetail">
+   </div>
+   <mat-card-content style="padding-top: 2%;">
+   <p>
+     {{comic.description}}
+   </p>
+   <label for="author">Author : </label><a class="author" href="#">{{comic.author}}</a>   
+</mat-card-content>
+</mat-card>
+</div>
