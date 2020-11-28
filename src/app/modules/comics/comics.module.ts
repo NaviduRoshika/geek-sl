@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+// import { MatIconModule } from '@angular/material/icon/icon-module';
+import {MatIconModule} from '@angular/material/icon';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ArtistDetailsComponent } from './artist-details/artist-details.component';
@@ -11,6 +13,7 @@ import { ComicsComponent } from './comics.component';
 import { ComicComponent } from './comic/comic.component';
 import { ComicDetailsComponent } from './comic-details/comic-details.component';
 import { MatExpansionModule} from '@angular/material/expansion';
+import { ReadComicComponent } from './read-comic/read-comic.component';
 
 @NgModule(
     {
@@ -20,7 +23,8 @@ import { MatExpansionModule} from '@angular/material/expansion';
             ArtistDetailsComponent,
             ComicsHomeComponent,
             ComicComponent,
-            ComicDetailsComponent
+            ComicDetailsComponent,
+            ReadComicComponent
         ],
         imports:[
             BrowserModule,
@@ -28,7 +32,8 @@ import { MatExpansionModule} from '@angular/material/expansion';
             MatButtonModule,
             MatCardModule,
             ComicsRoutingModule,
-            MatExpansionModule
+            MatExpansionModule,
+            MatIconModule
         ]
 
     }

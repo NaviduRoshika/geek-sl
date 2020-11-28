@@ -10,7 +10,7 @@ export class ComicService {
     {
       comicId:1,
       comicName:"Naruto",
-      imagePathCard:"https://can-of-worms.co.uk/5645-large_default/the-flash-comic-book-wooden-wall-plaque.jpg",
+      imagePathCard:"https://i.pinimg.com/736x/9a/b6/a2/9ab6a2794d0ed343a4c5d489f5d9828d.jpg",
       author:"Masashi Kishimoto",
       description:"Naruto is a Japanese manga series written and illustrated by Masashi Kishimoto. It tells the story of Naruto Uzumaki, a young ninja who seeks recognition from his peers and dreams of becoming the Hokage, the leader of his village",
       imagePathDetail:"https://qph.fs.quoracdn.net/main-qimg-dbe7a01f55cd5895da8802ae53aa5cf4",
@@ -18,7 +18,7 @@ export class ComicService {
     },{
       comicId:1,
       comicName:"The Batman",
-      imagePathCard:"https://can-of-worms.co.uk/5645-large_default/the-flash-comic-book-wooden-wall-plaque.jpg",
+      imagePathCard:"https://static.posters.cz/image/750/plakaty/batman-comic-i4516.jpg",
       author:"Masashi Kishimoto",
       description:"Naruto is a Japanese manga series written and illustrated by Masashi Kishimoto. It tells the story of Naruto Uzumaki, a young ninja who seeks recognition from his peers and dreams of becoming the Hokage, the leader of his village",
       imagePathDetail:"https://qph.fs.quoracdn.net/main-qimg-dbe7a01f55cd5895da8802ae53aa5cf4",
