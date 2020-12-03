@@ -8,7 +8,6 @@ import { HeroesComponent } from './modules/heroes/heroes.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
-  {path:'artists',component:ArtistsComponent},
   {path:'heroes',component:HeroesComponent}
 ];
 

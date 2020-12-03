@@ -27,13 +27,14 @@ import { ReadComicComponent } from './read-comic/read-comic.component';
             ReadComicComponent
         ],
         imports:[
+            MatExpansionModule,
+            MatCardModule,
+            MatIconModule,
             BrowserModule,
             BrowserAnimationsModule,
             MatButtonModule,
-            MatCardModule,
             ComicsRoutingModule,
-            MatExpansionModule,
-            MatIconModule
+            
         ]
 
     }

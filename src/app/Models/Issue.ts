@@ -4,5 +4,5 @@ export interface Issue{
     issueNo:number;
     issueTitle:string,
     issuDescription:string;
-    pages:[]
+    pages:string[]
 }

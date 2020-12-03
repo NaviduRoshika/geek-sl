@@ -15,8 +15,8 @@ export class EpisodeListComponent implements OnInit {
   }
 
   onComicReadClick(issue:Issue){
-    this.router.navigate([issue.issueNo],{relativeTo:this.route});
-    console.log("issue", issue,ActivatedRoute);
+    this.router.navigate([issue.issueNo],{relativeTo:this.route,queryParams:{issueTitle:issue.issueTitle}});
+    console.log("issue", issue,this.route);
   }
   
 

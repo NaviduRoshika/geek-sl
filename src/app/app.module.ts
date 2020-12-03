@@ -12,6 +12,7 @@ import { ComicsComponent } from './modules/comics/comics.component';
 import { ArtistsComponent } from './modules/artists/artists.component';
 import { HeroesComponent } from './modules/heroes/heroes.component';
 import { ComicsModule } from './modules/comics/comics.module';
+import { ArtistsModule } from './modules/artists/artists.module';
 
 
 @NgModule({
@@ -19,7 +20,6 @@ import { ComicsModule } from './modules/comics/comics.module';
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    ArtistsComponent,
     HeroesComponent,
   ],
   imports: [
@@ -28,7 +28,8 @@ import { ComicsModule } from './modules/comics/comics.module';
     BrowserAnimationsModule,
     MatButtonModule,
     MatCardModule,
-    ComicsModule
+    ComicsModule,
+    ArtistsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

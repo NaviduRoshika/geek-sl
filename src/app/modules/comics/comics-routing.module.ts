@@ -12,7 +12,7 @@ const routes = [
      children:[
          {path:'', component:ComicsHomeComponent},
          {path:':comicName',component:ComicComponent},
-         {path:':comicName/:issueId',component:ReadComicComponent}
+         {path:':comicName/:issueNo',component:ReadComicComponent}
      ] }
 ];
 

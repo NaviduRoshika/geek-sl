@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
+import { Artist } from '../Models/Artist';
 import { Comic } from '../Models/Comic';
 import { Issue } from '../Models/Issue';
+import { artists } from '../data/artists';
 
 @Injectable({
   providedIn: 'root'
@@ -74,7 +76,10 @@ export class ComicService {
       issueNo:1,
       issueTitle:"Naruto Uzumaki",
       issuDescription:"Even as the Shinobi Alliance’s resolve begins to falter in the face of Obito’s overwhelming power, Naruto refuses to give in. But how can he turn the tables with the odds so stacked against him",
-      pages:[]
+      pages:["https://pbs.twimg.com/media/D6G9yxBW4AApFnH.jpg",
+             "https://cdn2.vectorstock.com/i/1000x1000/55/26/comic-book-page-layout-comics-template-vector-20575526.jpg",
+             "https://miro.medium.com/max/2730/1*sWeGQ-h6VGZY9vjDs7X2Ww.jpeg",
+             "https://progameguides.com/wp-content/uploads/2020/08/fortnite-ch2-season4-comic-book-page1-816x1239.jpg"]
     },{
       comicName:"The Batman",
       comicId:2,
@@ -119,6 +124,8 @@ export class ComicService {
       pages:[]
     }
    ];
+
+ 
   
   constructor() { }
 
@@ -140,4 +147,11 @@ export class ComicService {
        }
        return issues;
     }
+
+    getComicIssuePages = (comicName:string,issueNo:number) => {
+         const issue = this.issues.find(iss => iss.comicName === comicName && iss.issueNo === issueNo);
+         return issue.pages;
+    }
+
+   
 }

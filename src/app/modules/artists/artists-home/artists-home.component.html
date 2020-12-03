@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row" style="padding-top: 5%;">
+     <div class="col-md-3" *ngFor="let artist of artists">
+        <div class="comic-artist-div">
+            <mat-card (click)="onArtistCardClick(artist.name)">
+                <div>
+                    <!-- <img id="comic-card-image" src="https://image.freepik.com/free-vector/colorful-halftone-comic-background_23-2147919239.jpg" alt="comics"> -->
+                    <img class="artist-card-image" mat-card-image [src]="artist.image" alt="Photo of a Shiba Inu">
+                </div>
+                <mat-card-title>{{artist.name}}</mat-card-title>
+            </mat-card>
+           </div>
+        </div>
+    </div>
+</div>

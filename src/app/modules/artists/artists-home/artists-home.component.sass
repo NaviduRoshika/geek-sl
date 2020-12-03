@@ -1,20 +1,25 @@
 .mat-card-title 
   font-size: 22px
 
-.comic-card-image
+.artist-card-image
   object-fit: cover
   max-height: 30vh
   min-height: 30vh
 
-.comic-card-div
+.comic-artist-div
   // height: 500px
   // width: 500px
   max-width: 80%
   max-height: 50vh
   margin: auto
 
+mat-card
+    transition: transform 1s
+    margin: 3%
+mat-card
+    &:hover
+        transform: scale(1.05)
+
 @media screen and (max-width: 600px) 
    .container
      margin-top: 8%
- 
-  

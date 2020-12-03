@@ -1,17 +1,43 @@
 <div class="comic-read-div">
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
-                <button mat-fab color="warn" aria-label="Example icon button with a home icon">
+            <div   #section1 style="margin-top: -90px;">SC</div>
+            <div class="col-md-2">
+                <button mat-fab color="warn" (click)="backButtonClick()" aria-label="Example icon button with a home icon">
                     <mat-icon>home</mat-icon>
                   </button>
             </div>
-            <div class="col-md-6">
-                <div class="page-view">
-                 
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="2" style="margin: auto;padding: 1%;">
+                        <div>
+                            <div class="page-controllers">
+                                <button mat-raised-button (click)="onBackwardClick()"><</button>
+                            </div>
+                            <div class="page-controllers">
+                                <button mat-raised-button >{{(issueTitle) + " " + (pageIndex+1) + "/" + pages.length}}</button>
+                            </div>
+                            <div class="page-controllers">
+                                <button mat-raised-button (click)="onForwardClick()">></button>
+                            </div>
+                       </div>
+                    </div>
+                    <div class="10">
+                        <div class="page-view">
+                            <img id="comic-page" [src]="pages[pageIndex]" alt="">
+                         </div>
+                    </div>
+                    <div class="2"  style="margin: auto;padding: 1%;">
+                        <div class="page-controllers">
+                            <button mat-raised-button (click)="onBackwardClick()"><<</button>
+                        </div>
+                        <div class="page-controllers">
+                            <button mat-raised-button (click)="onForwardClick()">>></button>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-3">Back</div>
+            <div class="col-md-2">Back</div>
         </div>
     </div>
 </div>
