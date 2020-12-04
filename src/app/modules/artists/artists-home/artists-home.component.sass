@@ -6,6 +6,15 @@
   max-height: 30vh
   min-height: 30vh
 
+.mat-card-title-div
+  overflow: hidden
+  white-space: nowrap
+  width: 100%
+  overflow: hidden
+  text-overflow: ellipsis
+  &:hover
+    animation: sweep 3s linear infinite
+
 .comic-artist-div
   // height: 500px
   // width: 500px
@@ -19,6 +28,8 @@ mat-card
 mat-card
     &:hover
         transform: scale(1.05)
+
+
 
 @media screen and (max-width: 600px) 
    .container

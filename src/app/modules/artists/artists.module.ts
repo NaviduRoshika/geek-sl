@@ -21,7 +21,8 @@ import { ArtistsComponent } from './artists.component';
             BrowserAnimationsModule,
             MatButtonModule,
             ArtistsRoutingModule
-        ]
+        ],
+        entryComponents:[]
     }
 )
 export class ArtistsModule{}

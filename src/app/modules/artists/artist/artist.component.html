@@ -1,1 +1,42 @@
-<p>artist works!</p>
+<div class="container">
+    <div class="row" style="margin: 2%;">
+        <div class="col-md-4">
+            <div class="artist-image-div">
+                <img  class="artist-image"  [src]="artist.image" alt="image">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div style="margin: 5px;">
+                <mat-card>
+                    <mat-card-title>
+                        <div class="mat-card-title-div">
+                           About
+                        </div>
+                    </mat-card-title>
+                    <mat-card-content>
+                        {{artist.about}}
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div style="margin: 5px;">
+                <mat-card>
+                    <mat-card-title>
+                        <div class="mat-card-title-div">
+                          Contact
+                        </div>
+                    </mat-card-title>
+                    <mat-card-content>
+                        Facebook
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            
+           
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            
+        </div>
+    </div>
+</div>
