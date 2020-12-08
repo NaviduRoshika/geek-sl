@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "geek-sl"
+  "defaultProject": "geek-sl",
+  "cli": {
+    "analytics": false
+  }
 }

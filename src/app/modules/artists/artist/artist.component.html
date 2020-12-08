@@ -1,8 +1,14 @@
 <div class="container">
     <div class="row" style="margin: 2%;">
-        <div class="col-md-4">
-            <div class="artist-image-div">
-                <img  class="artist-image"  [src]="artist.image" alt="image">
+        <div class="offset-md-1 col-md-4">
+            <div style="margin: 5px;">
+            <mat-card>
+                <mat-card-content>
+                    <div class="artist-image-div">
+                        <img  class="artist-image"  [src]="artist.image" alt="image">
+                    </div>
+                </mat-card-content>
+            </mat-card>
             </div>
         </div>
         <div class="col-md-6">
@@ -34,9 +40,33 @@
            
         </div>
     </div>
-    <div class="row">
-        <div class="col">
-            
+    <div class="row"  style="margin: 2%">
+        <div class="offset-md-1 col-md-10">
+            <mat-card>
+                <mat-card-title>
+                    <div class="mat-card-title-div">
+                     Works
+                    </div>
+                </mat-card-title>
+                <mat-card-content>
+                    <div class="row">
+                        <div class="col-sm-4" *ngFor="let w of workImages">
+                            <mat-card class="work-card">
+                                <mat-card-content>
+                                    <div class="work-image-div">
+                                        <img  class="work-image"  [src]="w.image" alt="image">
+                                    </div>
+                                </mat-card-content>
+                                <mat-card-title>
+                                    <div class="work-title-div">
+                                    <a>{{w.name}}</a> 
+                                    </div>
+                                </mat-card-title>
+                            </mat-card>
+                        </div>
+                    </div>
+                </mat-card-content>
+            </mat-card>
         </div>
     </div>
 </div>

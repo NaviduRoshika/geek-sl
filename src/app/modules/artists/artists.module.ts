@@ -12,7 +12,7 @@ import { ArtistsComponent } from './artists.component';
 
 @NgModule(
     {
-        declarations:[ArtistsComponent,ArtistsHomeComponent, ArtistComponent],
+        declarations:[ArtistsComponent,ArtistsHomeComponent,ArtistComponent],
         imports:[
             MatExpansionModule,
             MatCardModule,
