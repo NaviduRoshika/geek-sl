@@ -5,9 +5,9 @@
     font-size: 1rem
 
 .artist-image-div
-   background-color: yellow
-   width: 30vh
-   height: 30vh
+   text-align: center
+//    width: 30vh
+//    height: 30vh
    margin: auto
 
 .work-card
@@ -21,12 +21,13 @@
 
 .work-image-div
    width: 100%
-   height: 30vh
+   height: 22vh
    margin: auto
 
 .work-image
   height: 100%
   width: 100%
+  object-fit: cover
 
 .home
     padding-bottom: 2vh
@@ -34,3 +35,8 @@
 @media screen and (max-width: 600px) 
    .container
      margin-top: 8%
+
+
+@media screen and (min-width: 700px)
+   .artist-image
+     max-width: 14vw

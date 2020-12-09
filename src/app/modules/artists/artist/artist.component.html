@@ -32,15 +32,15 @@
                         </div>
                     </mat-card-title>
                     <mat-card-content>
-                        Facebook
+                      <a href="https://www.facebook.com/" target="_blank"> <img src="assets\images\facebook24.png" alt="fb"></a>
                     </mat-card-content>
                 </mat-card>
             </div>
-            
-           
+
+
         </div>
     </div>
-    <div class="row"  style="margin: 2%">
+    <div class="row"  style="margin: 3%">
         <div class="offset-md-1 col-md-10">
             <mat-card>
                 <mat-card-title>
@@ -50,7 +50,7 @@
                 </mat-card-title>
                 <mat-card-content>
                     <div class="row">
-                        <div class="col-sm-4" *ngFor="let w of workImages">
+                        <div class="col-6 col-sm-6 col-md-3" *ngFor="let w of workImages">
                             <mat-card class="work-card">
                                 <mat-card-content>
                                     <div class="work-image-div">
@@ -59,7 +59,8 @@
                                 </mat-card-content>
                                 <mat-card-title>
                                     <div class="work-title-div">
-                                    <a>{{w.name}}</a> 
+                                     <button mat-stroked-button (click)="onWorkCardClick(w.name)">{{w.name}}</button>
+                                     <!-- <a mat-stroked-button href="#" target="_blank">{{w.name}}</a> -->
                                     </div>
                                 </mat-card-title>
                             </mat-card>
