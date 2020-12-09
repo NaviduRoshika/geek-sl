@@ -1,8 +1,9 @@
+import { AdminModule } from './modules/admin/admin.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MatButtonModule} from '@angular/material/button';
 import { MatCardModule} from '@angular/material/card';
- 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -13,6 +14,7 @@ import { ArtistsComponent } from './modules/artists/artists.component';
 import { HeroesComponent } from './modules/heroes/heroes.component';
 import { ComicsModule } from './modules/comics/comics.module';
 import { ArtistsModule } from './modules/artists/artists.module';
+import { AdminComponent } from './modules/admin/admin.component';
 
 
 @NgModule({
@@ -20,7 +22,7 @@ import { ArtistsModule } from './modules/artists/artists.module';
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    HeroesComponent,
+    HeroesComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,8 @@ import { ArtistsModule } from './modules/artists/artists.module';
     MatButtonModule,
     MatCardModule,
     ComicsModule,
-    ArtistsModule
+    ArtistsModule,
+    AdminModule
   ],
   providers: [],
   bootstrap: [AppComponent]
