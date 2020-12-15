@@ -1,6 +1,6 @@
 <div class="container" style="margin-top: 10%;">
  <div class="row">
-   <div class="col-12">
+   <div class="offset-sm-1 col-10">
     <mat-card>
       <mat-card-title>
           <div class="mat-card-title-div">
@@ -9,13 +9,36 @@
       </mat-card-title>
       <mat-card-content>
         <div class="row">
-           <div class="col-5">
+           <div class="col-sm-5">
              <div class="comic-image-div">
              <img id="comic-image" src="https://www.sideshow.com/storage/product-images/500848FWHT/perfect-alliance_dc-comics_feature.jpg" alt="">
             </div>
             </div>
+            <div class="col-sm-3">
+              <div class="comic-options-div">
+                <ul>
+                  <li> Comics : 08</li>
+                  <li>Readers : 350</li>
+                  <li>
+                    <button style="margin: 3px;" mat-raised-button (click)="onNewComicClick()">New</button>
+                    <button style="margin: 3px;" mat-raised-button>Edit</button>
+                  </li>
+                </ul>
+               </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="comic-options-div">
+                <ul>
+                  <li>Issues : 23</li>
+                  <li>Pages   : 250</li>
+                  <li>
+                    <button style="margin: 3px;" mat-raised-button>New</button>
+                    <button style="margin: 3px;" mat-raised-button>Edit</button>
+                  </li>
+                </ul>
+               </div>
+            </div>
         </div>
-        <a href="https://www.facebook.com/" target="_blank"> <img src="assets\images\facebook24.png" alt="fb"></a>
       </mat-card-content>
      </mat-card>
    </div>

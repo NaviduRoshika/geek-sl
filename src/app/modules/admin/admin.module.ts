@@ -9,6 +9,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { AddNewComicComponent } from './add-new-comic/add-new-comic.component';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations:[AdminComponent,AdminHomeComponent, AddNewComicComponent],
@@ -16,6 +17,7 @@ import { AddNewComicComponent } from './add-new-comic/add-new-comic.component';
     MatExpansionModule,
     MatCardModule,
     MatIconModule,
+    MatListModule,
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
