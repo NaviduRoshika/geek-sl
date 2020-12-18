@@ -1,6 +1,6 @@
 <div class="container" style="margin-top: 10%;">
   <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-12 offset-md-1 col-md-10">
       <mat-card>
         <div>
             <!-- <img id="comic-card-image" src="https://image.freepik.com/free-vector/colorful-halftone-comic-background_23-2147919239.jpg" alt="comics"> -->
@@ -11,7 +11,97 @@
             </div>
         </mat-card-title>
         <mat-card-content>
-
+          <div class="form-container">
+            <form [formGroup]="comicDataForm" (ngSubmit)="onSubmit()">
+                 <div class="row">
+                   <div class="col-md-4">
+                      <mat-form-field id="name-field" appearance="fill">
+                        <mat-label>Comic Name</mat-label>
+                        <input matInput
+                              type="text"
+                              id="name"
+                              formControlName="name"
+                              >
+                      </mat-form-field>
+                      <br>
+                      <mat-form-field id="author-field" appearance="fill">
+                        <mat-label>Author</mat-label>
+                        <input matInput
+                              type="text"
+                              id="author"
+                              formControlName="author"
+                              >
+                      </mat-form-field>
+                      <br>
+                      <mat-form-field appearance="fill">
+                        <mat-label>Image Path - Card </mat-label>
+                        <input matInput
+                              type="text"
+                              id="imagePathCard"
+                              formControlName="imagePathCard"
+                              >
+                      </mat-form-field>
+                      <br>
+                      <mat-form-field appearance="fill">
+                        <mat-label>Image Path - Details</mat-label>
+                        <input matInput
+                              type="text"
+                              id="imagePathDetails"
+                              formControlName="imagePathDetails"     
+                              >
+                      </mat-form-field>
+                    <br/>
+                   </div>
+                   <div class="col-md-8">
+                     <div class="row">
+                        <div class="col-md-4">
+                          <span>Card</span>
+                          <div id="image-card-div">
+                            <div *ngIf="comicDataForm.controls.imagePathCard.value == null" >
+                              <img src=" https://www.jaipuriaschoolorai.in/wp-content/uploads/2016/11/blank-img.jpg" 
+                                    style="width: 100%;max-height:245px;"
+                                   alt="detals">
+                            </div>
+                            <div *ngIf="comicDataForm.controls.imagePathCard.value !== null" >
+                              <img [src]="comicDataForm.controls.imagePathCard.value" 
+                                    style="width: 100%;max-height:245px;"
+                                   alt="detals">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-8">
+                          <span style="margin-left: 25px;">Details</span>
+                          <div id="image-detail-div">
+                            <div *ngIf="comicDataForm.controls.imagePathDetails.value == null" >
+                              <img src=" https://www.jaipuriaschoolorai.in/wp-content/uploads/2016/11/blank-img.jpg" 
+                                    style="width: 100%;max-height:245px;"
+                                   alt="detals">
+                            </div>
+                            <div *ngIf="comicDataForm.controls.imagePathDetails.value !== null" >
+                              <img [src]="comicDataForm.controls.imagePathDetails.value" 
+                                    style="width: 100%;max-height:245px;"
+                                   alt="detals">
+                            </div>
+                          </div>
+                        </div>
+                     </div>
+                    </div>
+                 </div>
+                    <mat-form-field id="description-field" appearance="fill">
+                      <mat-label>Dscription</mat-label>
+                      <textarea matInput
+                                id="description" 
+                                formControlName="description">
+                      </textarea>
+                    </mat-form-field>
+                     <div class="text-right">
+                      <button type="reset" class="float-rightx m-1" mat-raised-button color="warn">Cancel</button>
+                      <button type="submit"
+                              [disabled]="!comicDataForm.valid"
+                              class="float-rightx m-1" mat-raised-button color="accent">Create</button>
+                     </div>
+            </form>
+          </div>
         </mat-card-content>
     </mat-card>
     </div>

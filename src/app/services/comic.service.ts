@@ -135,6 +135,10 @@ export class ComicService {
   
   constructor() { }
 
+    addComic = (newComic :Comic)=>{
+      this.comics.push(newComic);
+    }
+
     getComicSet = ()=>{
       return this.comics.slice();
     }
