@@ -13,9 +13,11 @@ import { AddNewComicComponent } from './add-new-comic/add-new-comic.component';
 import { MatListModule} from '@angular/material/list';
 import { MatFormFieldModule} from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
-  declarations:[AdminComponent,AdminHomeComponent, AddNewComicComponent],
+  declarations:[AdminComponent,AdminHomeComponent, AddNewComicComponent, SidebarComponent],
   imports:[
     MatExpansionModule,
     MatCardModule,
@@ -27,7 +29,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     MatButtonModule,
     ReactiveFormsModule,
-    AdminRoutingModule],
+    AdminRoutingModule,
+    FontAwesomeModule],
     entryComponents:[]
 })
 export class AdminModule{}

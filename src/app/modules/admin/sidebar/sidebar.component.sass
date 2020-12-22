@@ -1,0 +1,114 @@
+.sidebar-div
+  // background-color: #ffffff
+  min-width: 200px
+.expand
+  // background-color: #ffff00
+  min-width: 200px
+.notExpand
+  // background-color: #ff1100
+  min-width: 65px
+
+.sidebar
+  background-color: #424242
+  margin-top: 36px
+  padding-top: 30px
+  position: fixed
+  left: 0
+  width: 250px
+  height: 100%
+  transition: 0.5s
+  transition-property: left
+  z-index: 3
+
+.logo-div
+  text-align: center
+
+.sidebar .logo
+  width: 200px
+  height: auto
+  margin-bottom: 10px
+  // transition: 0.1s
+  transition-property: width
+
+.sidebar a
+  color: #ffffff
+  display: block
+  width: 100%
+  line-height: 60px
+  text-decoration: none
+  padding-left: 40px
+  box-sizing: border-box
+  transition: 0.5s
+  transition-property: background
+
+
+// .sidebar
+//   a:hover
+//     background-color: #5c5c5c
+
+a
+ &:hover
+   background-color: #5d5d5d
+
+// mat-card
+//     &:hover
+//         transform: scale(1.05)
+
+.sidebar a span
+  margin-left: 10px
+
+label #sidebar-btn
+  z-index: 1
+  color: #ffffff
+  position: fixed
+  cursor: pointer
+  font-size: 20px
+  margin: -25px 0
+
+.toggle-bars
+  position: relative
+  left: 220px
+
+#check:checked ~ .toggle-bars
+  left: 200px
+  color: #00ff00
+
+#check:checked ~ .sidebar
+  left: -200px
+
+#check:checked ~ .sidebar .logo
+  width: 40px
+  margin-left: 200px
+  
+#check:checked ~ .sidebar a 
+  margin-left: 175px
+  font-size: 20px
+  width: 76px
+
+#check:checked ~ .sidebar a span
+  display: none
+
+.side-left
+  transition: 0.6s
+  transition-property: max-width
+
+
+@media screen and ( min-width: 500px)
+    #check:checked ~ * .side-left
+      // display: none
+      max-width: 5%
+      // background-color: #123456
+    #check
+      display: none
+    
+@media screen and ( max-width: 500px)
+  .side-left
+    display: none
+  .side-right
+    margin-left: 60px
+  .sidebar
+    margin-top: 18px
+    
+
+
+

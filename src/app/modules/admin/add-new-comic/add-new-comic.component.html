@@ -47,7 +47,7 @@
                         <input matInput
                               type="text"
                               id="imagePathDetails"
-                              formControlName="imagePathDetails"     
+                              formControlName="imagePathDetails"
                               >
                       </mat-form-field>
                     <br/>
@@ -58,12 +58,12 @@
                           <span>Card</span>
                           <div id="image-card-div">
                             <div *ngIf="comicDataForm.controls.imagePathCard.value == null" >
-                              <img src=" https://www.jaipuriaschoolorai.in/wp-content/uploads/2016/11/blank-img.jpg" 
+                              <img src=" https://www.jaipuriaschoolorai.in/wp-content/uploads/2016/11/blank-img.jpg"
                                     style="width: 100%;max-height:245px;"
                                    alt="detals">
                             </div>
                             <div *ngIf="comicDataForm.controls.imagePathCard.value !== null" >
-                              <img [src]="comicDataForm.controls.imagePathCard.value" 
+                              <img [src]="comicDataForm.controls.imagePathCard.value"
                                     style="width: 100%;max-height:245px;"
                                    alt="detals">
                             </div>
@@ -73,12 +73,12 @@
                           <span style="margin-left: 25px;">Details</span>
                           <div id="image-detail-div">
                             <div *ngIf="comicDataForm.controls.imagePathDetails.value == null" >
-                              <img src=" https://www.jaipuriaschoolorai.in/wp-content/uploads/2016/11/blank-img.jpg" 
+                              <img src=" https://www.jaipuriaschoolorai.in/wp-content/uploads/2016/11/blank-img.jpg"
                                     style="width: 100%;max-height:245px;"
                                    alt="detals">
                             </div>
                             <div *ngIf="comicDataForm.controls.imagePathDetails.value !== null" >
-                              <img [src]="comicDataForm.controls.imagePathDetails.value" 
+                              <img [src]="comicDataForm.controls.imagePathDetails.value"
                                     style="width: 100%;max-height:245px;"
                                    alt="detals">
                             </div>
@@ -90,12 +90,14 @@
                     <mat-form-field id="description-field" appearance="fill">
                       <mat-label>Dscription</mat-label>
                       <textarea matInput
-                                id="description" 
+                                id="description"
                                 formControlName="description">
                       </textarea>
                     </mat-form-field>
                      <div class="text-right">
-                      <button type="reset" class="float-rightx m-1" mat-raised-button color="warn">Cancel</button>
+                      <button type="reset" class="float-rightx m-1"
+                              mat-raised-button color="warn"
+                              (click)="onCancel()">Cancel</button>
                       <button type="submit"
                               [disabled]="!comicDataForm.valid"
                               class="float-rightx m-1" mat-raised-button color="accent">Create</button>

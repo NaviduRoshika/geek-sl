@@ -1,0 +1,24 @@
+<div>
+  <input  type="checkbox" name="check" id="check">
+  <!-- <div class="toggle-bars">
+    <label for="check"><fa-icon id="sidebar-btn" [icon]="faBars"></fa-icon></label>
+  </div> -->
+  <div class="sidebar">
+    <div class="toggle-bars">
+      <label for="check"><fa-icon id="sidebar-btn" [icon]="faBars"></fa-icon></label>
+    </div>
+     <div class="logo-div">
+       <img src="https://th.bing.com/th/id/OIP.VXJhrXAQLJT6fcKcoCHrSQAAAA?pid=Api&rs=1" class="logo"  alt="logo">
+     </div>
+     <a href="#" ><fa-icon [icon]="faColumns"></fa-icon><span>Dashboard</span></a>
+     <a href="#" ><fa-icon [icon]="faBookOpen"></fa-icon><span>Comics</span></a>
+     <a href="#" ><fa-icon [icon]="faPaintBrush"></fa-icon><span>Artists</span></a>
+  </div>
+  <div class="row">
+    <div  class="col-sm-2 side-left">
+    </div>
+    <div class="col-sm-10 side-right">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

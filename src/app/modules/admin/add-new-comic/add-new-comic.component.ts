@@ -1,3 +1,4 @@
+import { Router, ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Comic } from 'src/app/Models/Comic';
@@ -23,7 +24,7 @@ export class AddNewComicComponent implements OnInit {
     imagePathDetail:"",
     noOfIssues:5
   };
-  constructor(private comicService:ComicService) { }
+  constructor(private comicService:ComicService,private router:Router,private route:ActivatedRoute) { }
 
   ngOnInit(): void {
     this.comicDataForm = new FormGroup({
@@ -42,7 +43,7 @@ export class AddNewComicComponent implements OnInit {
     this.newComic.description = this.comicDataForm.controls.description.value;
     this.newComic.imagePathCard = this.comicDataForm.controls.imagePathCard.value;
     this.newComic.imagePathDetail = this.comicDataForm.controls.imagePathDetails.value;
-  
+
     this.comicService.addComic(this.newComic);
   }
   // isImageUrl = require('is-image-url');
@@ -51,7 +52,7 @@ export class AddNewComicComponent implements OnInit {
   InvalidUrl(control : FormControl):{[s:string]:boolean}{
     // {invalidUrl:true}
     // console.log("i came",this.isImageUrl(control.value));
-    
+
     var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
       '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
       '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
@@ -63,6 +64,10 @@ export class AddNewComicComponent implements OnInit {
     //   return {invalidUrl:true};
     // }
     return null;
+  }
+
+  onCancel(){
+   this.router.navigate(['../'],{relativeTo:this.route});
   }
 
 
@@ -91,7 +96,7 @@ export class AddNewComicComponent implements OnInit {
   //     '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
 
   //   console.log(str,pattern.test(str));
-    
+
   //   return !!pattern.test(str);
   // }
 
